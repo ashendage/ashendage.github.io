@@ -11,6 +11,38 @@
             font-family: 'Segoe UI', sans-serif;
             background-color: #0a192f;
             color: #ccd6f6;
+            position: relative;
+            overflow-x: hidden;
+        }
+        body::before, body::after {
+            content: "";
+            position: absolute;
+            background-repeat: no-repeat;
+            background-size: 80px;
+            opacity: 0.08;
+            z-index: 0;
+        }
+        body::before {
+            top: 50px;
+            left: 10%;
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/7/75/ServiceNow_logo.svg');
+        }
+        body::after {
+            bottom: 50px;
+            right: 10%;
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/c/cf/Angular_full_color_logo.svg');
+        }
+        .background-ai {
+            position: absolute;
+            top: 200px;
+            left: 60%;
+            width: 100px;
+            height: 100px;
+            background: url('https://upload.wikimedia.org/wikipedia/commons/1/17/Artificial_Intelligence_logo.svg') no-repeat;
+            background-size: contain;
+            opacity: 0.08;
+            transform: rotate(30deg);
+            z-index: 0;
         }
         .navbar {
             background: #112240;
@@ -19,33 +51,22 @@
             justify-content: space-between;
             align-items: center;
         }
-        .navbar-title {
+        .navbar .title {
             color: #64ffda;
             font-weight: bold;
             font-size: 1.5rem;
         }
-        .navbar-name {
+        .navbar .name {
             color: #ccd6f6;
             font-size: 1.2rem;
+            font-weight: normal;
         }
         .hero {
             text-align: center;
             padding: 80px 15%;
-            background: #112240 url('https://upload.wikimedia.org/wikipedia/commons/7/75/ServiceNow_logo.svg') no-repeat left bottom;
-            background-size: 100px;
-            color: #ccd6f6;
+            background: #112240;
             position: relative;
-        }
-        .hero::after {
-            content: "";
-            position: absolute;
-            top: 10px;
-            right: 20px;
-            background: url('https://upload.wikimedia.org/wikipedia/commons/c/cf/Angular_full_color_logo.svg') no-repeat;
-            background-size: 80px;
-            width: 80px;
-            height: 80px;
-            opacity: 0.2;
+            z-index: 1;
         }
         .hero h1 {
             font-size: 2.8rem;
@@ -75,6 +96,8 @@
         }
         .projects {
             padding: 50px 15%;
+            position: relative;
+            z-index: 1;
         }
         .projects h2 {
             color: #64ffda;
@@ -126,15 +149,15 @@
     </style>
 </head>
 <body>
+    <div class="background-ai"></div>
     <nav class="navbar">
-        <div class="navbar-title">ServiceNow Technical Architect</div>
-        <div class="navbar-name">Akashkumar Shendage</div>
+        <div class="title">ServiceNow Technical Architect</div>
+        <div class="name">Akashkumar Shendage</div>
     </nav>
-
-  <section class="hero">
-    <h1>ServiceNow Technical Architect</h1>
-    <p>10+ Years Experience | ServiceNow, Angular, JavaScript, HTML/CSS</p>
-  </section>
+    <section class="hero">
+        <h1>Architecting Intelligent Solutions</h1>
+        <p>Total Experience: 10+ years<br>ServiceNow: 6+ years | Frontend (Angular, HTML, CSS): 4+ years</p>
+    </section>
 
   <section class="tech-stack">
     <h2>Tech Stack</h2>
